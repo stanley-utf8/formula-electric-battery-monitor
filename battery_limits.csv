@@ -1,0 +1,6 @@
+Name,Upper_Red_Limit,Upper_Orange_Limit,Lower_Red_Limit,Lower_Orange_Limit
+Cell_Voltage,4.2,4.15,3.0,3.2
+Cell_Temp,55,45,0,5
+Module_SOC,100,95,10,20
+Current,150,120,-150,-120
+Total_Voltage,400,380,300,320 
