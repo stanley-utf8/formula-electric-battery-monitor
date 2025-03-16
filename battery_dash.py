@@ -89,7 +89,7 @@ def parse_module_limits(file_path):
         print(f"Error parsing CSV file: {e}")
     return limits_dict
 
-module_limits = parse_module_limits('./battery_limits.csv')
+module_limits = parse_module_limits('./data/battery_limits.csv')
 
 def parse_module_data(file_path):
     data_dict = defaultdict(float)
@@ -121,7 +121,7 @@ def get_csv(csv_path):
 
 def render_main_page():
         try: 
-            main_page_data = parse_module_data('./main_page.csv')
+            main_page_data = parse_module_data('./data/main_page.csv')
         except:
             main_page_data = defaultdict(float)
 
@@ -200,7 +200,7 @@ def render_main_page():
 def render_module(module_key):
     # Get data for current module
     try:
-        module_data = parse_module_data(f'./module_{module_key}_data.csv')  # Assuming this is your data file format
+        module_data = parse_module_data(f'./data/module_{module_key}_data.csv')  # Assuming this is your data file format
     except:
         module_data = defaultdict(float)  # Default values if file not found
 

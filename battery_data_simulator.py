@@ -40,7 +40,7 @@ def write_csv(filename: str, data: Dict[str, Any]) -> None:
 
 def update_main_page_data() -> None:
     """Update the main page data file with realistic values"""
-    data = read_csv("main_page.csv")
+    data = read_csv("./data/main_page.csv")
     
     # If file didn't exist, initialize with default values
     if not data:
@@ -72,12 +72,12 @@ def update_main_page_data() -> None:
     data["soc"] += soc_change + random.uniform(-0.05, 0.05)
     data["soc"] = max(0, min(100, data["soc"]))
     
-    write_csv("main_page.csv", data)
+    write_csv("./data/main_page.csv", data)
     return data
 
 def update_module_data(module_num: int) -> None:
     """Update a module data file with realistic values"""
-    filename = f"module_{module_num}_data.csv"
+    filename = f"./data/module_{module_num}_data.csv"
     data = read_csv(filename)
     
     # If file didn't exist, initialize with default values
